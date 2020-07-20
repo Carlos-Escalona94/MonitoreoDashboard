@@ -1,0 +1,12 @@
+<div fxLayout.gt-xs = "row warp" fxLayout.xs = "column">
+    <ng-container *ngFor="let item of panelList; let i = index">
+        <div *ngIf="isNewColumn(i)" 
+        fxLayout = "column" 
+        fxFlex.xs="1 1 auto"
+        fxFlex.sm="0 1 calc({{item.width*25}}%)"
+        fxFlex.gt-sm="0 1 calc({{item.width*8.33333}}%)"
+        >
+            <ng-template #column></ng-template>
+        </div>
+    </ng-container>
+</div>
